@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Move & Code — Active Coding for Healthy Screen Use</title>
+  <meta name="description" content="ScratchJr ile çocuklar için aktif kodlama: ekranı azalt, hareketi artır, erken yaşta kodlama temelleri kazandır." />
+  <style>
+
+:root{
+  --bg:#f6f4ff;
+  --card:#ffffff;
+  --text:#1f2340;
+  --muted:#5c648a;
+  --accent:#5b6cff;
+  --accent2:#7c5cff;
+  --line:#e2e6ff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:linear-gradient(180deg,var(--bg),#eef1ff);
+  color:var(--text);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:24px;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.badge{
+  font-size:12px;
+  padding:7px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--muted);
+  background:rgba(255,255,255,0.75);
+}
+
+.hero{
+  padding:56px 0 28px;
+  display:grid;
+  gap:16px;
+}
+
+h1{
+  font-size:44px;
+  line-height:1.05;
+  margin:0;
+  letter-spacing:-0.02em;
+}
+
+.sub{
+  color:var(--muted);
+  font-size:16px;
+  max-width:62ch;
+}
+
+.cta{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.btn{
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,0.65);
+  color:var(--text);
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  transition:0.15s ease;
+}
+
+.btn.primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#ffffff;
+  border-color:transparent;
+  font-weight:700;
+  box-shadow:0 12px 25px rgba(91,108,255,0.22);
+}
+
+.grid{
+  display:grid;
+  gap:14px;
+  grid-template-columns:repeat(12,1fr);
+  margin:26px 0;
+}
+
+.card{
+  grid-column:span 12;
+  background:rgba(255,255,255,0.92);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 30px rgba(31,35,64,0.06);
+}
+
+@media (min-width:760px){
+  .card.third{
+    grid-column:span 4;
+  }
+
+  .card.half{
+    grid-column:span 6;
+  }
+}
+
+.kicker{
+  color:var(--accent2);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+h2{
+  margin:6px 0 8px;
+  font-size:22px;
+}
+
+p{
+  margin:8px 0;
+  color:var(--muted);
+}
+
+ul{
+  margin:8px 0 0 18px;
+  color:var(--muted);
+}
+
+.steps{
+  display:grid;
+  gap:10px;
+}
+
+.step{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:rgba(246,244,255,0.65);
+}
+
+.num{
+  width:28px;
+  height:28px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  background:rgba(91,108,255,0.12);
+  border:1px solid var(--line);
+  color:var(--accent);
+  font-weight:800;
+}
+
+.shots{
+  display:grid;
+  gap:10px;
+  grid-template-columns:repeat(2,1fr);
+}
+
+.shot{
+  border-radius:14px;
+  border:1px solid var(--line);
+  overflow:hidden;
+  background:rgba(255,255,255,0.8);
+}
+
+.shot img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+footer{
+  padding:28px 0 50px;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+  margin-top:26px;
+}
+
+.small{
+  font-size:13px;
+}
+
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">ScratchJr • 4-9 Yaş • 10–15 dk/gün</div>
+      <div class="badge">Aktif Ekran Zamanı Protokolü</div>
+    </header>
+
+    <section class="hero">
+      <h1>Move & Code</h1>
+      <div class="sub">
+        Çocuklar için <b>aktif kodlama</b>: ScratchJr ile kısa ve eğlenceli mini oyunlar.
+        Amaç: <b>pasif ekranı azaltmak</b>, <b>hareketi artırmak</b> ve erken yaşta <b>kodlama düşüncesi</b> kazandırmak.
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="./lesson-plan.pdf" target="_blank" rel="noopener">Klavuzu (PDF) İndir</a>
+        <a class="btn" href="https://github.com/USERNAME/REPO" target="_blank" rel="noopener">GitHub’da Gör</a>
+        <a class="btn" href="#activities">Aktiviteler</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card half">
+        <div class="kicker">Problem</div>
+        <h2>Pasif ekran süresi</h2>
+       <p>
+    Günümüzde çocukların ekranla geçirdiği süre artmaktadır. Ancak bu sürenin büyük bölümü
+    <b>pasif içerik tüketimi</b> (video izleme, tek yönlü oyunlar) şeklinde gerçekleşir.
+  </p>
+  <p>
+    Pasif ekran kullanımı; <b>hareketi azaltabilir</b>, <b>sosyal etkileşimi sınırlayabilir</b> ve
+    çocuğu üretici bir rolden çok tüketici konumuna yerleştirebilir.
+  </p>
+  <p>
+    Sorun ekranın kendisi değil; ekranın <b>nasıl kullanıldığıdır</b>.
+    Bu nedenle ihtiyaç duyulan şey, ekranı tamamen yasaklamak değil;
+    ekran deneyimini <b>aktif, üretici ve fiziksel katılım içeren</b> bir öğrenme sürecine dönüştürmektir.
+  </p>
+      </div>
+
+      <div class="card half">
+        <div class="kicker">Çözüm</div>
+        <h2>Kodla → Hareket Et → Tekrarla</h2>
+        <p>
+          Her sahne <b>20–30 saniyelik</b> kodlama/oyun parçasıdır ve ardından çocuk ekrandan uzaklaşıp
+          <b>fiziksel hareket</b> eder. Böylece ekran süresi bölünür ve öğrenme pekişir.
+        </p>
+      </div>
+    </section>
+
+    <section id="activities" class="grid">
+      <div class="card third">
+        <div class="kicker">Activite 1</div>
+        <h2>Robot Gibi Hareket Et</h2>
+        <p>Sıralama ve Motor Becerileri</p>
+        <ul>
+          <li>3 adım ileri</li>
+          <li>Sağa dön</li>
+          <li>Zıpla</li>
+        </ul>
+      </div>
+
+      <div class="card third">
+        <div class="kicker">Activite 2</div>
+        <h2>Dans Algoritması</h2>
+        <p>Örüntü ve Ritim</p>
+        <ul>
+          <li>Zıpla</li>
+          <li>Dön</li>
+          <li>Alkışla</li>
+        </ul>
+      </div>
+
+      <div class="card third">
+        <div class="kicker">Activite 3</div>
+        <h2>Hataları Bulalım</h2>
+        <p>Hata bulma ve Problem Çözme.</p>
+        <ul>
+          <li>Robot yanlış gidiyor</li>
+          <li>Blokları düzelt</li>
+          <li>Tekrar dene</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card half">
+        <div class="kicker">Nasıl Kullanılır?</div>
+        <h2>3 adımda kullanım</h2>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><div><b>Kodla</b><div class="small">3–4 blokla küçük bir komut dizisi kur.</div></div></div>
+          <div class="step"><div class="num">2</div><div><b>Çalıştır</b><div class="small">Karakter hareket etsin; konuşma balonu görev versin.</div></div></div>
+          <div class="step"><div class="num">3</div><div><b>Hareket et</b><div class="small">Çocuk tableti bırakır, hareketi yapar, geri gelir.</div></div></div>
+        </div>
+      </div>
+
+      <div class="card half">
+        <div class="kicker">Öğrenim Çıktıları</div>
+        <h2>Kazanımlar</h2>
+        <ul>
+          <li>Sıralama / Algoritmik düşünme</li>
+          <li>Sebep–Sonuç İlişkisi Kurma</li>
+          <li>Basit Hata Bulma</li>
+          <li>Motor Becerileri</li>
+          <li>Sağlıklı Ekran Alışkanlığı</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="kicker">Ekran Görüntüleri</div>
+        <h2>Örnek ekran görüntüleri</h2>
+        <p>Buraya ScratchJr sahnelerinden 4 görsel koyulacak.</p>
+        <div class="shots">
+          <div class="shot"><img src="./assets/denemephoto.png" alt="Robot Gibi Hareket Et"></div>
+          <div class="shot"><img src="./assets/shot2.png" alt="Dans Algoritması"></div>
+          <div class="shot"><img src="./assets/shot3.png" alt="Hataları Bulalım"></div>
+          <div class="shot"><img src="./assets/shot4.png" alt="Activity screenshot"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div><b>Move & Code</b> — Active Coding for Healthy Screen Use</div>
+      <div class="small">İletişim: <a href="mailto:you@example.com">you@example.com</a> • © 2026</div>
+    </footer>
+  </div>
+</body>
+</html>
